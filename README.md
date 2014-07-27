@@ -7,10 +7,10 @@ for it to work.
 I got the inspiration to this while seeing an animated gif at a talk at ElixirConf. Also, as an exercise because
 I didnt know how to model a two dimensional array in Elixir.
 
-I added a test to the fire calculation so that anyone can try to calculate the canvas average, since my method
+I added a test to the fire calculation so that anyone can try to calculate the average, since my method
 of doing this doesnt look elegant at all. Functional maybe, but elegant, I dont think so.
 
-If you are interested in this, just reimplement the Canvas.average/4 function and run the tests.
+If you are interested in implementing another solution to the average of the two dimentional array, just reimplement the Canvas.average/3 function and run the tests.
 
 Please make any comments regarding any part of this code.
 
