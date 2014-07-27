@@ -7,7 +7,6 @@ defmodule Canvas do
     canvas  = for x <- x_range, y <- Range.new(0, max_y ),
                  do: {{x, y}, default_value},
                  into: HashDict.new
-    # x_range |> Enum.reduce(canvas, fn(x, acc) -> set_char(acc, x, max_y, 0) end)
   end  
 
   def average_to_new_canvas(canvas, max_x, max_y) do
