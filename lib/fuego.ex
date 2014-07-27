@@ -7,6 +7,8 @@ defmodule Fuego do
   def burn() do
     :encurses.initscr
     {max_x, max_y} = :encurses.getmaxxy
+    IO.puts max_x
+    IO.puts max_y
     :random.seed
     
     Canvas.new(max_x , max_y)
