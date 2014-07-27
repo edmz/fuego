@@ -20,7 +20,7 @@ defmodule Canvas do
     canvas |> Enum.reduce(Canvas.new(max_x, max_y), fn(curr, acc) ->
                             {{x, y}, _ } = curr
                             if y == 0 do
-                              set_char(acc, x, max_y, :random.uniform(255))
+                              set_char(acc, x, max_y, :random.uniform(80) + 60)
                             else
                               set_char(acc, x, y - 1, average(canvas, max_x, max_y, curr))                            
                             end                            

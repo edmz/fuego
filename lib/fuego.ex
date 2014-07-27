@@ -2,10 +2,12 @@ defmodule Fuego do
 
   @whitespace 32  
   @hottest 255
-  @intensity_chars '       \'"""""".........,,,,,,,,,,,,,__--------========********************%%%%%%%%%%%%%%%%%%$$$$$$$$$$$$$$$$0000000000000####################000000000000000000000000000000'
+  @intensity_chars '                                     . ,_-\---=*o**%%&%%$O$$$$$$0000000000000▒▒▒▒▒▒▒▒▒#############000000000000000000000000000000'
 
   def burn() do
     :encurses.initscr
+    :encurses.init_pair(1, 8, -1)
+    :encurses.attron(1)
     {max_x, max_y} = :encurses.getmaxxy
     :random.seed
     
