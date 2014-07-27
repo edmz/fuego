@@ -14,4 +14,5 @@ If you are interested in this, just reimplement the Canvas.average/4 function an
 
 Please make any comments regarding any part of this code.
 
-Feel free to share
+This is the first time ever that I use ncurses, so I couldnt find a way to add color to it. Once I find out how to do that, it will
+definitely look better.
