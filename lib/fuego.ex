@@ -18,10 +18,14 @@ defmodule Fuego do
   def blow_fire(canvas, max_x, max_y) do
     canvas
       |> Canvas.average_to_new_canvas(max_x, max_y)
+      |> Canvas.scroll_up(max_x, max_y)
       |> render
       |> blow_fire(max_x, max_y)
   end
 
+  def add_new_fire(canvas, max_x, max_y) do
+    
+  end
 
   def character_for_intensity(intensity) do
     Enum.at(@intensity_chars, Float.floor(intensity / 2))

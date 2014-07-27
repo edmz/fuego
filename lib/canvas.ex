@@ -16,6 +16,17 @@ defmodule Canvas do
                           end)      
   end
 
+  def scroll_up(canvas, max_x, max_y) do
+    canvas |> Enum.reduce(Canvas.new(max_x, max_y), fn(curr, acc) ->
+                            {{x, y}, _ } = curr
+                            if y == 0 do
+                              set_char(acc, x, max_y, :random.uniform(255))
+                            else
+                              set_char(acc, x, y - 1, average(canvas, max_x, max_y, curr))                            
+                            end                            
+                          end)          
+  end 
+
   def average(canvas, _max_x, _max_y, {{x_pos, y_pos}, _}) when x_pos == 0 and y_pos == 0 do
     (get_char(canvas, x_pos , y_pos + 1) + get_char(canvas, x_pos + 1, y_pos)) / 2
       |> Float.floor    
@@ -71,13 +82,13 @@ defmodule Canvas do
       |> HashDict.fetch!({ x_pos, y_pos })
   end
 
-  def set_char(coords, x_pos, y_pos, char) do
+  def set_char(coords, x_pos, y_pos, char) when y_pos >= 0 do
     coords |>
       HashDict.put({x_pos, y_pos}, char)
   end
 
-  def set_char(_, _, _, _)  do
-    IO.puts "no"
+  def set_char(coords, _, _, _)  do
+    coords
   end    
   
 end
