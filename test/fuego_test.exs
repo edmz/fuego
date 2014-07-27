@@ -13,7 +13,7 @@ defmodule FuegoTest do
                                 {{0, 2}, 0}, {{1, 2}, 0}, {{2, 2}, 0}], HashDict.new) |> Enum.sort
 
     # IO.puts "xxx"
-    tranformed_array = original_array |> Fuego.average_to_new_canvas(2, 2) |> Enum.sort
+    tranformed_array = original_array |> Canvas.average_to_new_canvas(2, 2) |> Enum.sort
     assert expected_array == tranformed_array
   end
 end
