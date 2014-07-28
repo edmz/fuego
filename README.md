@@ -16,3 +16,9 @@ Please make any comments regarding any part of this code.
 
 This is the first time ever that I use ncurses, so I couldnt find a way to add color to it. Once I find out how to do that, it will
 definitely look better.
+
+Run it with:
+
+    $ mix run -e Fuego.burn
+
+
