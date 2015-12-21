@@ -1,3 +1,3 @@
 %{"cecho": {:git, "git://github.com/mazenharake/cecho.git", "2c1d9bdeceb606ddcda6663c71f6932ce2b92e57", []},
-  "encurses": {:git, "git://github.com/jzellner/encurses.git", "40a5f955b350566f2e353399660c88c521efc30b", []},
+  "encurses": {:git, "https://github.com/jzellner/encurses.git", "40a5f955b350566f2e353399660c88c521efc30b", []},
   "mydep": {:git, "git://github.com/mazenharake/cecho.git", "2c1d9bdeceb606ddcda6663c71f6932ce2b92e57", []}}

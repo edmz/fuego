@@ -35,7 +35,6 @@ defmodule Canvas do
     |> Enum.map(fn({x, y}) -> get_char(canvas, x, y) end)
     |> Enum.reduce(0, fn(curr, acc) -> curr + acc end)
     |> Kernel.div(Enum.count(coords_of_interest))
-    |> Float.floor
   end
 
   def average(_max_x, _max_y, {{x_pos, y_pos}, _}) when x_pos == 0 and y_pos == 0 do

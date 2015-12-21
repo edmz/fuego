@@ -30,7 +30,7 @@ defmodule Fuego do
   end
 
   def character_for_intensity(intensity) do
-    Enum.at(@intensity_chars, Float.floor(intensity / 2))
+    Enum.at(@intensity_chars, Kernel.div(intensity,2))
   end
   
 
